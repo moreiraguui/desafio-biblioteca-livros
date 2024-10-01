@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  mongodb-biblioteca-livros:
+    image: mongo:latest
+    container_name: "mongodb-biblioteca-livros"
+    ports:
+      - "27017:27017"
+    networks:
+      - biblioteca_net
+
+  api-biblioteca-livros:
+    image: api-biblioteca-livros:1.0
+    container_name: api-biblioteca-livros
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_APPLICATION_NAME: api-biblioteca-livros
+      SERVER_SERVLET_CONTEXT_PATH: /biblioteca
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb-biblioteca-livros:27017/
+      SPRING_DATA_MONGODB_DATABASE: biblioteca-livros-dev
+    networks:
+      - biblioteca_net
+    depends_on:
+      - mongodb-biblioteca-livros
+
+networks:
+  biblioteca_net:
