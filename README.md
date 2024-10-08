@@ -45,7 +45,8 @@ $ java -jar target/api-biblioteca-livros-0.0.1-SNAPSHOT.jar
 docker-compose up --build
 ```
 #### Com isso, esse comando vai:
-  - Construir a imagem da sua aplicação.
+  - Construir a imagem da aplicação.
+  - Construir a imagem do banco MongoDB.
   - Iniciar o contêiner da aplicação junto com o contêiner do MongoDB.
 
 ### A API poderá ser acessada em [localhost:8080](http://localhost:8080) e o Swagger poderá ser visualizado em [localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
