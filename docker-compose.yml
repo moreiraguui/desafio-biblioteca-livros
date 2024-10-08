@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   mongodb-biblioteca-livros:
     image: mongo:latest
@@ -10,7 +8,7 @@ services:
       - biblioteca_net
 
   api-biblioteca-livros:
-    image: api-biblioteca-livros:1.0
+    build: .
     container_name: api-biblioteca-livros
     ports:
       - "8080:8080"
