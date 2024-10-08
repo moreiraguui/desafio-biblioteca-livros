@@ -49,7 +49,7 @@ docker-compose up --build
   - Construir a imagem do banco MongoDB.
   - Iniciar o contêiner da aplicação junto com o contêiner do MongoDB.
 
-### A API poderá ser acessada em [localhost:8080](http://localhost:8080) e o Swagger poderá ser visualizado em [localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+### A API poderá ser acessada em [localhost:8080](http://localhost:8080) e o Swagger poderá ser visualizado em [localhost:8080/biblioteca/swagger-ui.html](http://localhost:8080/biblioteca/swagger-ui.html)
 
 ## API Endpoints
 
